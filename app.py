@@ -1,11 +1,13 @@
 from flask import Flask
 from flask_smorest import Api
-from app.resources import auth
-from app.infra.db import db
+from flask_cors import CORS
 from config import Config
+from app.infra.db import db
+from app.resources import auth
 
 app = Flask(__name__)
 app.config.from_object(Config)
+CORS(app)
 
 db.init_app(app)
 with app.app_context():
