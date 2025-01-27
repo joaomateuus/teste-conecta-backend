@@ -26,11 +26,9 @@ class AuthService:
         return user
     
     def get_user_contacts_organized_by_domain(self, resource_name: str):
-        # validar se resource name é valido
         user = self.user_repository.get_user_by_google_resource_name(resource_name)
-        if not user:
-            return
         
         contacts = self.google_api_client.get_user_google_contacts(user.token)
+        
         return utils.organize_contacts_by_domain(contacts)
 
