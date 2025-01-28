@@ -5,6 +5,7 @@ Repositório do back-end da aplicação **Super OrgContact**, responsável por c
 
 ## Tecnologias Utilizadas
 - Python 3.9
+- SQL Alchemy
 - Flask
 - Flask-CORS
 - Google API Client
