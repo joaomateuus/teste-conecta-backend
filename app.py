@@ -16,7 +16,6 @@ with app.app_context():
 
 api = Api(app)
 api.register_blueprint(auth.blueprint)
-# api.register_blueprint(main_routes.bp_v1)
 
 if __name__ == '__main__':
     app.run(debug=True)
